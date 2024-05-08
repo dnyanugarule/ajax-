@@ -1,0 +1,79 @@
+/* style.css */
+
+/* General body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+
+    /* Background image settings */
+    background-image: url('background.jpg');
+    /* Use your image path or name */
+    background-size: cover;
+    /* Ensure the background image covers the whole area */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Prevent the background image from repeating */
+}
+
+
+
+/* Styling for the container */
+.container {
+    /* Use percentage width instead of fixed height */
+    max-width: 100%;
+    /* Use a percentage for fluidity */
+    margin: auto;
+    background: rgba(255, 255, 255, 0.8);
+    /* Keep semi-transparent for visibility */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* Button styling */
+.add-user-btn {
+    display: flex;
+    /* Aligns the button on the left side */
+    justify-content: flex-start;
+    /* Align to the left */
+    margin-bottom: 20px;
+    /* Add spacing below the button */
+}
+
+.add-user-btn .btn {
+    border: 1px solid #28a745;
+    color: #28a745;
+}
+
+.add-user-btn .btn:hover {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Styling for the table */
+.table {
+    border: 1px solid #dee2e6;
+    background: transparent;
+    /* Make table background transparent */
+}
+
+.table th,
+.table td {
+    text-align: center;
+}
+
+/* Additional table styling */
+.table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table tr:hover {
+    background-color: #e9ecef;
+}
