@@ -1,29 +1,43 @@
+<!-- HTML document declaration with language attribute set to English -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <!-- Meta tag to specify character encoding -->
     <meta charset="UTF-8" />
+
+    <!-- Title of the page -->
     <title>Registered Users</title>
+
+    <!-- Link to the external CSS file for styling -->
     <link rel="stylesheet" href="style.css" />
-    <script src="./registered-users.js"></script> <!-- Link to the JS file for displaying data -->
+
+    <!-- Link to the JavaScript file that handles the logic for displaying registered users -->
+    <script src="./registered-users.js"></script>
 </head>
 
 <body>
 
+    <!-- Container to hold the content of the page -->
     <div class="container">
+        <!-- Heading for the section -->
         <h2>Registered Users</h2>
+
+        <!-- Table to display a list of registered users -->
         <table class="table table-striped table-bordered">
             <thead>
+                <!-- Table headers to define the structure of the data -->
                 <tr>
-                    <th scope="col">Sr No</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Username</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Phone</th>
-                    <th scope="col">City</th>
+                    <th scope="col">Sr No</th> <!-- Serial number column -->
+                    <th scope="col">Name</th> <!-- Name column -->
+                    <th scope="col">Username</th> <!-- Username column -->
+                    <th scope="col">Email</th> <!-- Email column -->
+                    <th scope="col">Phone</th> <!-- Phone number column -->
+                    <th scope="col">City</th> <!-- City column -->
                 </tr>
             </thead>
-            <tbody id="userTableBody"></tbody> <!-- The element where user data will be inserted -->
+            <!-- Table body where registered user data will be dynamically inserted -->
+            <tbody id="userTableBody"></tbody>
         </table>
     </div>
 </body>

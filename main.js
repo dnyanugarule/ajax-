@@ -1,8 +1,12 @@
-// JavaScript for the current page
+// JavaScript event listener for the button with ID "btn"
 let btn = document.getElementById("btn");
-btn.addEventListener("click", (e) => {
-    e.preventDefault(); // Prevent form from submitting the default way
 
+// Add an event listener to the button for the "click" event
+btn.addEventListener("click", (e) => {
+    // Prevent the default form submission behavior (like refreshing the page)
+    e.preventDefault();
+
+    // Get input values from form fields by their element IDs
     const email = document.getElementById("email").value;
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
@@ -10,21 +14,28 @@ btn.addEventListener("click", (e) => {
     const city = document.getElementById("city").value;
     const phone = document.getElementById("phone").value;
 
+    // Create an object to represent the new user, including address details
     let postObject = {
-        email,
-        password,
-        name,
-        phone,
-        username,
+        email,   // User's email address
+        password,   // User's password
+        name,   // User's name
+        phone,   // User's phone number
+        username,   // User's username
         address: {
-            city,
+            city,   // User's city
         },
     };
 
+    // Retrieve stored users from local storage and parse them into a JavaScript array
+    // If no users are stored, create an empty array
     let storedUser = JSON.parse(localStorage.getItem("users")) || [];
-    storedUser.unshift(postObject); // Add the new user to the beginning of the array
-    localStorage.setItem("users", JSON.stringify(storedUser)); // Store the updated array in local storage
 
-    // Redirect to the new page to view registered users
-    window.location.href = "registered-users.html"; // Change to your target page
+    // Add the new user to the start of the stored users array
+    storedUser.unshift(postObject);
+
+    // Store the updated users array back into local storage as a JSON string
+    localStorage.setItem("users", JSON.stringify(storedUser));
+
+    // Redirect to the registered users page to show the updated list of users
+    window.location.href = "registered-users.html"; // Redirect to the desired page
 });
